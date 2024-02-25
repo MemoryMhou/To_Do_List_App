@@ -46,8 +46,7 @@
 		2DBEADC62B8BD87E00C3742B = {
 			isa = PBXGroup;
 			children = (
-				2DBEADE92B8BDA0600C3742B /* ToDoListItem+CoreDataClass.swift */,
-				2DBEADEA2B8BDA0600C3742B /* ToDoListItem+CoreDataProperties.swift */,
+				2DBEADED2B8BDA9E00C3742B /* ToDoListItem */,
 				2DBEADD12B8BD87E00C3742B /* To_Do_List_App */,
 				2DBEADD02B8BD87E00C3742B /* Products */,
 			);
@@ -74,6 +73,15 @@
 				2DBEADDB2B8BD87E00C3742B /* To_Do_List_App.xcdatamodeld */,
 			);
 			path = To_Do_List_App;
+			sourceTree = "<group>";
+		};
+		2DBEADED2B8BDA9E00C3742B /* ToDoListItem */ = {
+			isa = PBXGroup;
+			children = (
+				2DBEADEA2B8BDA0600C3742B /* ToDoListItem+CoreDataProperties.swift */,
+				2DBEADE92B8BDA0600C3742B /* ToDoListItem+CoreDataClass.swift */,
+			);
+			path = ToDoListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

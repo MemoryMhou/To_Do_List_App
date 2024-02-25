@@ -9,11 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    func getAllItems() {
+        do{
+            let items = try context.fetch(ToDoListItem.fetchRequest())
+        }
+        catch {
+            //error
+        }
+    }
+    
+    func createItem(name: String){
+        
+    }
+    
+    func deleteItem(item: ToDoListItem){
+        
+    }
+    
+    func updateItem(item: ToDoListItem){
+        
+    }
+    
+    
 }
 
