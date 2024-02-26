@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
     title = "Core Data To Do List"
         view.addSubview(tableView)
+        getAllItems()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
@@ -61,6 +62,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // CORE DATA
     func getAllItems() {
         do{
@@ -78,9 +83,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let newItem = ToDoListItem(context: context)
         newItem.name = name
         newItem.createdAt = Date()
+       
         
         do {
             try context.save()
+            getAllItems()
             
         }
         catch {
@@ -105,6 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             try context.save()
+            
             
         }
         catch {
