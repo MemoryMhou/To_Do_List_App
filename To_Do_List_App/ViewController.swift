@@ -107,6 +107,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
+    
     func createItem(name: String){
         let newItem = ToDoListItem(context: context)
         newItem.name = name
@@ -123,6 +125,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
+    
     func deleteItem(item: ToDoListItem){
         context.delete(item)
         
@@ -135,6 +139,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             //error
         }
     }
+    
+    
     
     func updateItem(item: ToDoListItem, newName: String){
         item.name = newName
